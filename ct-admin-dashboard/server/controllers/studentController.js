@@ -63,7 +63,7 @@ const addStudent = async (req, res) => {
 // Get all students
 const getStudents = async (req, res) => {
   try {
-    const students = await Student.find().sort({ createdAt: -1 });
+    const students = await Student.find().sort({ studentId: 1 });
     res.status(200).json({
       success: true,
       message: 'Students fetched successfully',
